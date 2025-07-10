@@ -39,7 +39,7 @@ A responsive, modern e-commerce frontend built with React.js, Vite, and Bootstra
 ## 🛠️ Tech Stack
 
 ### Core
-- **React 18** - JavaScript library for building user interfaces
+- **React 19** - JavaScript library for building user interfaces
 - **Vite** - Next Generation Frontend Tooling
 - **React Router DOM** - For client-side routing
 - **React Icons** - Popular icons for React apps
