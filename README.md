@@ -90,20 +90,35 @@ A responsive, modern e-commerce frontend built with React.js, Vite, and Bootstra
 ## 📁 Project Structure
 
 ```
-src/
-├── assets/           # Static assets (images, fonts)
-├── components/       # Reusable UI components
-│   ├── common/      # Common components (Header, Footer, etc.)
-│   └── ui/          # Basic UI components (Button, Card, etc.)
-├── pages/           # Page components
-│   ├── About/       # About page
-│   ├── Cart/        # Shopping cart
-│   ├── Checkout/    # Checkout process
-│   ├── Contact/     # Contact page
-│   ├── Products/    # Product listing
-│   └── ...
-├── App.jsx          # Main App component
-└── main.jsx         # Application entry point
+fashion-shop/
+├── public/           # Static files
+├── src/
+│   ├── assets/       # Static assets (images, fonts, CSS)
+│   ├── component/    # Reusable UI components
+│   │   ├── featured/     # Featured products section
+│   │   ├── footer/       # Footer component
+│   │   ├── hero/         # Hero banner component
+│   │   ├── navbar/       # Navigation bar
+│   │   ├── offers/       # Special offers section
+│   │   ├── popular/      # Popular products section
+│   │   └── testimonials/ # Customer testimonials
+│   ├── pages/        # Page components
+│   │   ├── About/           # About page
+│   │   ├── Cart/            # Shopping cart
+│   │   ├── categories/      # Product categories
+│   │   ├── Checkout/        # Checkout process
+│   │   ├── Contact/         # Contact page
+│   │   ├── Login/           # User login
+│   │   ├── new-arrivals/    # New arrivals products
+│   │   ├── ProductDetails/  # Single product view
+│   │   ├── Products/        # Product listing
+│   │   ├── Register/        # User registration
+│   │   ├── sale/            # Sale products
+│   │   └── shop/            # Main shop page
+│   ├── App.jsx        # Main App component
+│   ├── App.css        # Main styles
+│   └── main.jsx       # Application entry point
+└── node_modules/      # Dependencies
 ```
 
 ## 🎨 Styling Guidelines
