@@ -1,0 +1,496 @@
+/* ======================= Popular Products Section ======================= */
+#popular-products {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+
+#popular-products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+#popular-products .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======================= Section Header ======================= */
+#popular-products .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+#popular-products .section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary-color);
+  border-radius: 3px;
+}
+
+#popular-products .section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+#popular-products .section-subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ======================= Filters ======================= */
+#popular-products .filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+#popular-products .filter-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  color: #555;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#popular-products .filter-btn:hover,
+#popular-products .filter-btn.active {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* ======================= Products Grid ======================= */
+#popular-products .products-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.products-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .products-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .products-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================= Product Card ======================= */
+#popular-products .product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+}
+
+#popular-products .product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================= Product Badges ======================= */
+#popular-products .product-badges {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#popular-products .badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#popular-products .badge.new {
+  background: #2ecc71;
+}
+
+#popular-products .badge.sale {
+  background: #e74c3c;
+}
+
+#popular-products .badge.category {
+  background: #3498db;
+  opacity: 0.9;
+}
+
+/* ======================= Product Image ======================= */
+#popular-products .product-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 200px;
+  background: #f8f9fa;
+  margin-bottom: 12px;
+}
+
+#popular-products .product-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#popular-products .product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* ======================= Product Actions ======================= */
+#popular-products .product-actions {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+#popular-products .product-card:hover .product-actions {
+  bottom: 0;
+}
+
+#popular-products .action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+#popular-products .action-btn:hover {
+  background: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* ======================= Product Info ======================= */
+#popular-products .product-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#popular-products .product-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#popular-products .product-title a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#popular-products .product-title a:hover {
+  color: var(--secondary-color);
+}
+
+/* ======================= Product Rating ======================= */
+#popular-products .product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #f1c40f;
+}
+
+#popular-products .product-rating .filled {
+  color: #f1c40f;
+}
+
+#popular-products .rating-count {
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+/* ======================= Product Colors ======================= */
+#popular-products .product-colors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#popular-products .color-option {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+#popular-products .color-option:hover {
+  transform: scale(1.2);
+}
+
+/* ======================= Product Price ======================= */
+#popular-products .product-price {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#popular-products .current-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+#popular-products .old-price {
+  font-size: 1rem;
+  color: #95a5a6;
+  text-decoration: line-through;
+}
+
+/* ======================= Product Card Content ======================= */
+.product-details {
+  padding: 15px 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================= Add to Cart Button - Clean Design ======================= */
+.add-to-cart-btn {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  border: 1px solid #e0e0e0;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-color: #2c3e50;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.98);
+}
+
+.add-to-cart-btn svg {
+  margin-left: 6px;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover svg {
+  transform: translateX(2px);
+}
+
+[dir='rtl'] .add-to-cart-btn svg {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+[dir='rtl'] .add-to-cart-btn:hover svg {
+  transform: translateX(-2px);
+}
+
+/* ======================= View All Button ======================= */
+#popular-products .view-all-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#popular-products .view-all-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: #2c3e50;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #2c3e50;
+}
+
+#popular-products .view-all-btn:hover {
+  background: transparent;
+  color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================= Responsive Design ======================= */
+@media (max-width: 1199.98px) {
+  #popular-products .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  #popular-products {
+    padding: 4rem 0;
+  }
+  
+  #popular-products .section-title {
+    font-size: 2rem;
+  }
+  
+  #popular-products .products-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #popular-products .section-title {
+    font-size: 1.8rem;
+  }
+  
+  #popular-products .filter-btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  #popular-products .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  #popular-products .section-title {
+    font-size: 1.6rem;
+  }
+  
+  #popular-products .filters {
+    gap: 0.5rem;
+  }
+  
+  #popular-products .filter-btn {
+    padding: 0.3rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  #popular-products .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #popular-products .view-all-btn {
+    padding: 0.7rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#popular-products .product-card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+#popular-products .product-card:nth-child(1) { animation-delay: 0.1s; }
+#popular-products .product-card:nth-child(2) { animation-delay: 0.2s; }
+#popular-products .product-card:nth-child(3) { animation-delay: 0.3s; }
+#popular-products .product-card:nth-child(4) { animation-delay: 0.4s; }
