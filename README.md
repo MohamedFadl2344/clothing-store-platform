@@ -3,7 +3,7 @@
 [![React](https://img.shields.io/badge/React-19.x-blue)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-4.x-646CFF)](https://vitejs.dev/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.x-7952B3)](https://getbootstrap.com/)
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](https://github.com/yourusername/fashion-shop)
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](https://github.com/MohamedFadl2344/clothing-store-platform.git)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
@@ -64,7 +64,7 @@ A responsive, modern e-commerce frontend built with React.js, Vite, and Bootstra
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
+   git clone [https://github.com/MohamedFadl2344/clothing-store-platform.git]
    cd fashion-shop
    ```
 
