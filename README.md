@@ -150,13 +150,14 @@ fashion-shop/
 - **Home Page**: Landing page with all main components
 - **About Page**: Company information and team section
 - **Contact Page**: Contact form and information with Google Maps integration
+- **Login Page**: User authentication and login functionality
+- **Shop Page**: Product browsing and filtering interface
 
 ### Pages Under Development
 The following pages are currently in development:
 - **Product Catalog**: Complete product listing with filters
 - **Product Details**: Detailed product view with gallery
 - **Shopping Cart**: Cart management and checkout process
-- **User Authentication**: Login and registration system
 - **Checkout Process**: Order completion flow
 - **Special Sections**: Sales and new arrivals pages
 
