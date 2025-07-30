@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './popular.css';
 
 const Popular = () => {
+  const [activeActionId, setActiveActionId] = useState(null);
   const [products] = useState([
    
     [
@@ -164,15 +165,50 @@ const Popular = () => {
                   </div>
                   
                   <div className="product-image">
-                    <img src={product.image} alt={product.name} />
-                    <div className="product-actions">
-                      <button className="action-btn" aria-label="إضافة إلى المفضلة">
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      onClick={() => {
+                        // Toggle active actions on mobile
+                        if (window.innerWidth <= 575.98) {
+                          setActiveActionId(activeActionId === product.id ? null : product.id);
+                        }
+                      }}
+                    />
+                    <div 
+                      className={`product-actions popular-product-actions ${activeActionId === product.id ? 'active' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (window.innerWidth <= 575.98) {
+                          setActiveActionId(null);
+                        }
+                      }}
+                    >
+                      <button 
+                        className="action-btn" 
+                        aria-label="إضافة إلى المفضلة"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                        }}
+                      >
                         <FaHeart />
                       </button>
-                      <button className="action-btn" aria-label="معاينة سريعة">
+                      <button 
+                        className="action-btn" 
+                        aria-label="معاينة سريعة"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                        }}
+                      >
                         <FaEye />
                       </button>
-                      <button className="action-btn" aria-label="مقارنة">
+                      <button 
+                        className="action-btn" 
+                        aria-label="مقارنة"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                        }}
+                      >
                         <FaExchangeAlt />
                       </button>
                     </div>

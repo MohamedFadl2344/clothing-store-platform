@@ -5,6 +5,7 @@ import './featured.css';
 
 const Featured = () => {
   const [showAll, setShowAll] = useState(false);
+  const [activeOverlayId, setActiveOverlayId] = useState(null);
   
   const featuredProducts = [
     {
@@ -84,17 +85,42 @@ const Featured = () => {
                       style={{
                         height: '300px',
                         objectFit: 'cover',
-                        transition: 'transform 0.5s ease'
+                        transition: 'transform 0.5s ease',
+                        cursor: 'pointer'
                       }}
                       onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                       onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                      onClick={() => {
+                        // Toggle active overlay on mobile
+                        if (window.innerWidth <= 575.98) {
+                          setActiveOverlayId(activeOverlayId === product.id ? null : product.id);
+                        }
+                      }}
                     />
-                    <div className="product-overlay d-flex align-items-center justify-content-center">
+                    <div 
+                      className={`product-overlay featured-product-overlay d-flex align-items-center justify-content-center ${activeOverlayId === product.id ? 'active' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (window.innerWidth <= 575.98) {
+                          setActiveOverlayId(null);
+                        }
+                      }}
+                    >
                       <div className="text-center">
-                        <button className="btn btn-outline-light btn-sm mb-2 px-3">
+                        <button 
+                          className="btn btn-outline-light btn-sm mb-2 px-3"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                          }}
+                        >
                           <FaEye className="ms-1" /> عرض سريع
                         </button>
-                        <button className="btn btn-outline-light btn-sm px-3">
+                        <button 
+                          className="btn btn-outline-light btn-sm px-3"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                          }}
+                        >
                           <FaShoppingCart className="ms-1" /> أضف للسلة
                         </button>
                       </div>

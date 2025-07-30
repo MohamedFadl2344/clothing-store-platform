@@ -24,6 +24,8 @@ import Footer from './component/footer/footer';
 // Lazy loaded pages
 const About = lazy(() => import('./pages/About/About'));
 import Contact from './pages/Contact/Contact';
+const Login = lazy(() => import('./pages/Login/Login'));
+const Shop = lazy(() => import('./pages/shop/shop'));
 
 // Loading component
 const Loading = () => (
@@ -70,8 +72,11 @@ const AppWrapper = () => {
             {/* Contact Page */}
             <Route path="/contact" element={<Contact />} />
             
+            {/* Login Page */}
+            <Route path="/account" element={<Login />} />
+            
             {/* Shop Page */}
-            {/* <Route path="/shop" element={<Shop />} /> */}
+            <Route path="/shop" element={<Shop />} />
            
             {/* 404 Page - Keep this last */}
             <Route path="*" element={

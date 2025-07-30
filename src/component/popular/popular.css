@@ -218,6 +218,11 @@
   z-index: 3;
 }
 
+#popular-products .popular-product-actions {
+  /* Specific styles for popular component actions */
+  z-index: 10;
+}
+
 #popular-products .product-card:hover .product-actions {
   bottom: 0;
 }
@@ -471,6 +476,24 @@
   #popular-products .view-all-btn {
     padding: 0.7rem 2rem;
     font-size: 0.95rem;
+  }
+  
+  /* Popular specific mobile styles */
+  #popular-products .product-image img {
+    cursor: pointer;
+  }
+  
+  #popular-products .popular-product-actions {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  #popular-products .popular-product-actions.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
   }
 }
 

@@ -17,13 +17,11 @@ dist-ssr
 
 # Ignore specific pages
 test/
-/src/pages/shop/
 /src/pages/sale/
 /src/pages/Register/
 /src/pages/Products/
 /src/pages/ProductDetails/
 /src/pages/new-arrivals/
-/src/pages/Login/
 /src/pages/Checkout/
 /src/pages/categories/
 /src/pages/Cart/

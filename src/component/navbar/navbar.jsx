@@ -124,7 +124,7 @@ const Navbar = () => {
       </header>
       
       {/* Bottom Navigation Bar - Mobile Only */}
-      <nav className="navbar-bottom-bar">
+      {/* <nav className="navbar-bottom-bar">
         <div className="navbar-bottom-content">
           <Link to="/" className="navbar-bottom-item">
             <i className="fas fa-home"></i>
@@ -144,6 +144,8 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
+      */}
+      
     </>
   );
 };
